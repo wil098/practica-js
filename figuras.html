@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="figurasFunctions.js"></script>
+<body>
+    <header>
+        <h1>
+            Figuras geometricas
+        </h1>
+        <p>Este es el primer ejercicio de figuras geometricas</p>
+    </header>
+
+    <section>
+
+        <!-- Calculo de cuadrado -->
+        <h2>calcular el area y permimetro de un cuadrado</h2>
+        <form>
+            <label for="InputCuadrado">
+                Escribe cuanto mide cada lado de tu cuadrado:
+            </label>
+            <input id="InputCuadrado" type="number" placeholder="Ejemplo: 5"/>
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                calcular permimetro
+            </button>
+            <button  type="button" onclick="calcularAreaCuadrado()">
+                calcular area
+            </button>
+        </form>
+
+        <!-- Calculo de triangulo -->
+        <h2>calcular el area y permimetro de un triangulo</h2>
+        <!-- inputs de 2 lados y 1 base -->
+        <form>
+            <label for="inputLado1">
+                Escribe cuanto mide el lado 1:
+            </label>
+            <input id="inputLado1" type="number" placeholder="Ejemplo: 5"/> <br>
+            <label for="inputLado2">
+                Escribe cuanto mide el lado 2:
+            </label>
+            <input id="inputLado2" type="number" placeholder="ejemplo: 5"> <br>
+            <label for="inputBase">
+                Escribe cuanto mide la base:
+            </label>
+            <input id="inputBase" type="number" placeholder="ejemplo: 10"> <br>
+            <label for="Height">
+                Altura
+            </label>
+            <input id="height" type="number" placeholder="Altura 5"><br>
+            <button type="button" onclick="calcularPerimetroTriangulo()">
+                calcular Perimetro
+            </button>
+            <button type="button" type="number" onclick="calcularAreaTriangulo()">
+                calcular Area
+            </button>
+        </form>
+    </section>
+</body>
+</html>

@@ -34,7 +34,7 @@ console.group("Triángulos");
 // console.log("La altura del triángulo es de: " + alturaTriangulo + "cm");
 
 function perimetroTriangulo(lado1, lado2, base) {
-  return lado1 + lado2 + base;
+  return (Number(lado1) + Number(lado2) + Number(base));//se hace coercion en el return para que no sea un string
 }
 // console.log("El perímetro del triángulo es: " + perimetroTriangulo + "cm");
 
@@ -75,18 +75,52 @@ function areaCirculo(radio) {
 console.groupEnd();
 
 
-// Aquí interactuamos con el HTML
-function calcularPerimetroCuadrado() {
-  const input = document.getElementById("InputCuadrado");
-  const value = input.value;
+//Aqui interactuamos con el HTML
 
-  const perimetro = perimetroCuadrado(value);
+//funciones de calculo de perimetros y areas del cuadrado.
+function calcularPerimetroCuadrado(){
+  const input = document.getElementById("InputCuadrado"); //Obtenemos el valor del input
+  const value = input.value; //aca se obtiene el valor del input
+
+  const perimetro = perimetroCuadrado(value); //aca se obtiene el perimetro del cuadrado
+  alert(perimetro); //aca se muestra el perimetro en un alert
+}
+function calcularAreaCuadrado(){
+  const input = document.getElementById("InputCuadrado"); //Obtenemos el valor del input
+  const value = input.value; //aca se obtiene el valor del input
+
+  const area = areaCuadrado(value); //aca se obtiene el area del cuadrado
+  alert(area); //aca se muestra el area en un alert
+}
+
+//Funciones de calculo de perimetros y areas del triangulo.
+function calcularPerimetroTriangulo(){
+  const input1 = document.getElementById("inputLado1");
+  const value= input1.value;
+  const input2 = document.getElementById("inputLado2");
+  const value2= input2.value;
+  const input3 = document.getElementById("inputBase");
+  const value3= input3.value;
+
+  const perimetro = perimetroTriangulo(value, value2, value3);
   alert(perimetro);
 }
-function calcularAreaCuadrado() {
-  const input = document.getElementById("InputCuadrado");
-  const value = input.value;
+function calcularAreaTriangulo(){
+  const height = document.getElementById("height");
+  const valueHeight = height.value;
+  const inputBase = document.getElementById("inputBase");
+  const valueBase = inputBase.value;
 
-  const area = areaCuadrado(value);
+  const area = areaTriangulo(valueBase, valueHeight);
   alert(area);
+}
+//calculo de alturo de triangulo isoseles
+
+function altura(lado1, lado2, base){
+  if (lado1 === lado2 && lado1 !== base){
+    const altura = Math.sqrt((lado1**2 - base**2 )/4);  
+    return altura;}
+  else{
+    console.log("intruduzca valores diferentes");
+  }
 }
